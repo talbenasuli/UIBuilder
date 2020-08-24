@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UIImageView {
+public extension UIImageView {
     
     func contentMode(_ mode: UIView.ContentMode) -> Self {
         self.contentMode = mode

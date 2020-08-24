@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UITextField {
+public extension UITextField {
     
     func borderStyle( _ borderStyle: BorderStyle) -> Self {
         self.borderStyle = borderStyle

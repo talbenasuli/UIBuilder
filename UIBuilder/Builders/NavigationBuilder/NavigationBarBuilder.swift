@@ -8,7 +8,7 @@
 
 import UIKit
 
-enum BarStyle {
+public enum BarStyle {
     case title(String)
     case separator(UIColor)
     case background(color: UIColor)
@@ -19,7 +19,7 @@ enum BarStyle {
 }
 
 
-extension UIViewController {
+public extension UIViewController {
     
     @discardableResult
     func navigation(barStyle: BarStyle...) -> Self {

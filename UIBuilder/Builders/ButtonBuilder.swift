@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UIButton {
+public extension UIButton {
     
     func text(_ text: String?) -> Self {
         setTitle(text, for: .normal)

@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UIStackView {
+public extension UIStackView {
     
     func addArrangedSubview(_ views: UIView...) {
         for view in views {

@@ -8,21 +8,21 @@
 
 import UIKit
 
-protocol ReusableView: class {
+public protocol ReusableView: class {
     static var defaultReuseIdentifier: String { get }
 }
 
-extension ReusableView where Self: UIView {
+public extension ReusableView where Self: UIView {
     static var defaultReuseIdentifier: String {
         return NSStringFromClass(self)
     }
 }
 
-extension UICollectionReusableView: ReusableView {}
-extension UITableViewCell: ReusableView {}
-extension UITableViewHeaderFooterView: ReusableView {}
+public extension UICollectionReusableView: ReusableView {}
+public extension UITableViewCell: ReusableView {}
+public extension UITableViewHeaderFooterView: ReusableView {}
 
-extension UICollectionView {
+public extension UICollectionView {
     func register<T: UICollectionViewCell>(_: T.Type) {
         register(T.self, forCellWithReuseIdentifier: T.defaultReuseIdentifier)
     }
@@ -50,7 +50,7 @@ extension UICollectionView {
     }
 }
 
-extension UITableView {
+public extension UITableView {
     func register<T: UITableViewHeaderFooterView>(_: T.Type) {
         register(T.self, forHeaderFooterViewReuseIdentifier: T.defaultReuseIdentifier)
     }

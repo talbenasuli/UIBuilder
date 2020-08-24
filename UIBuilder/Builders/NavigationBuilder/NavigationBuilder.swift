@@ -8,13 +8,13 @@
 
 import UIKit
 
-extension UIViewController {
+public extension UIViewController {
     func embedToNavigation() -> UINavigationController {
         return UINavigationController(rootViewController: self)
     }
 }
 
-extension UINavigationController {
+public extension UINavigationController {
     
     func color(_ color: UIColor) -> Self {
         navigationBar.barTintColor = color

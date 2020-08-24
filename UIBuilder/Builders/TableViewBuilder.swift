@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UITableView {
+public extension UITableView {
     
     @discardableResult
       func register(cells: [UITableViewCell.Type]) -> Self {
