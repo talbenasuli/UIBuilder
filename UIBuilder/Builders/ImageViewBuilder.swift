@@ -21,7 +21,7 @@ public extension UIImageView {
     }
 }
 
-extension UIImage {
+public extension UIImage {
     
     var view: UIImageView {
         return UIImageView(image: self)
@@ -48,7 +48,7 @@ extension UIImage {
 }
 
 
-extension UIColor {
+public extension UIColor {
     func image(ofSize size: CGSize = CGSize(width: 1, height: 1)) -> UIImage {
         return UIGraphicsImageRenderer(size: size).image { rendererContext in
             self.setFill()

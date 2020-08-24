@@ -40,7 +40,7 @@ public extension UIView {
     }
 }
 
-extension String {
+public extension String {
     
     var label: UILabel {
         let label = UILabel()
