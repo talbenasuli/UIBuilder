@@ -18,9 +18,9 @@ public extension ReusableView where Self: UIView {
     }
 }
 
-public extension UICollectionReusableView: ReusableView {}
-public extension UITableViewCell: ReusableView {}
-public extension UITableViewHeaderFooterView: ReusableView {}
+extension UICollectionReusableView: ReusableView {}
+extension UITableViewCell: ReusableView {}
+extension UITableViewHeaderFooterView: ReusableView {}
 
 public extension UICollectionView {
     func register<T: UICollectionViewCell>(_: T.Type) {
