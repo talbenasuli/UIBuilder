@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "UIQuickBuilder"
-  spec.version      = "1.1.0"
+  spec.version      = "1.2.0"
   spec.summary      = "A CocoaPods library written in Swift"
 
   spec.description  = <<-DESC
@@ -16,7 +16,7 @@ This CocoaPods library helps you build UI quicker via code.
   spec.ios.deployment_target = "11.0"
   spec.swift_version = "5.0"
 
-  spec.source        = { :git => "https://github.com/talbenasuli/UIBuilder.git", :tag => "#{spec.version}" }
+  spec.source        = { :git => "https://github.com/talbenasuli/UIBuilder.git", :tag => spec.version.to_s }
   spec.source_files  = "UIBuilder/**/*.{h,m,swift}"
 
 end

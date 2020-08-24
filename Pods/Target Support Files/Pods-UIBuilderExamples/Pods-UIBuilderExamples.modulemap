@@ -1,0 +1,6 @@
+framework module Pods_UIBuilderExamples {
+  umbrella header "Pods-UIBuilderExamples-umbrella.h"
+
+  export *
+  module * { export * }
+}
