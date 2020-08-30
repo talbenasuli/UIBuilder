@@ -15,18 +15,33 @@ public extension UILabel {
         return self
     }
     
+    func attributedText(_ attributedText: NSAttributedString, for state: UIControl.State = .normal) -> Self {
+        self.attributedText = attributedText
+        return self
+    }
+    
     func font(_ font: UIFont) -> Self {
         self.font = font
         return self
     }
     
-    func aliment(_ aliment: NSTextAlignment) -> Self {
-        self.textAlignment = aliment
+    func textAlignment(_ textAlignment: NSTextAlignment) -> Self {
+        self.textAlignment = textAlignment
         return self
     }
     
     func textColor(_ color: UIColor) -> Self {
         self.textColor = color
+        return self
+    }
+    
+    func lineBreakMode(_ lineBreakMode: NSLineBreakMode) -> Self {
+        self.lineBreakMode = lineBreakMode
+        return self
+    }
+    
+    func numberOfLines(_ numberOfLines: Int) -> Self {
+        self.numberOfLines = numberOfLines
         return self
     }
 }

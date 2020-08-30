@@ -20,10 +20,12 @@ public extension UIView {
         backgroundColor = color
         return self
     }
-    
-    enum ViewSide {
-        case left, right, top, bottom
-    }
+        
+    func round(corners: CACornerMask, withRadius radius: CGFloat) -> Self {
+         layer.cornerRadius = radius
+         layer.maskedCorners = corners
+         return self
+     }
     
     func addBlur() {
         let blurEffect = UIBlurEffect(style: .dark)
@@ -33,62 +35,23 @@ public extension UIView {
         addSubview(blurEffectView)
     }
     
-    func round(corners: CACornerMask, withRadius radius: CGFloat) -> Self {
-        layer.cornerRadius = radius
-        layer.maskedCorners = corners
+    func isHidden(_ isHidden: Bool) -> Self {
+        self.isHidden = isHidden
         return self
     }
-}
-
-public extension String {
     
-    var label: UILabel {
-        let label = UILabel()
-        label.text = self
-        return label
+    func alpha(_ alpha: CGFloat) -> Self {
+        self.alpha = alpha
+        return self
     }
     
-    var textField: UITextField {
-        let tf = UITextField()
-        tf.text = self
-        return tf
+    func clipsToBounds(_ clipsToBounds: Bool) -> Self {
+        self.clipsToBounds = clipsToBounds
+        return self
     }
     
-    var button: UIButton {
-        return button(withType: .system)
+    func isUserInteractionEnabled(_ isUserInteractionEnabled: Bool) -> Self {
+        self.isUserInteractionEnabled = isUserInteractionEnabled
+        return self
     }
-    
-    var barButton: UIBarButtonItem {
-        return UIBarButtonItem(title: self, style: .plain, target: nil, action: nil)
-    }
-    
-    func tabBarButton(tag: Int = 0) -> UITabBarItem {
-        return UITabBarItem(title: self, image: nil, tag: tag)
-    }
-    
-    func button(withType type: UIButton.ButtonType) -> UIButton {
-        let button = UIButton(type: type)
-        button.setTitle(self, for: .normal)
-        return button
-    }
-    
-    var image: UIImage? {
-        if self.isEmpty {
-            return UIImage()
-        }
-        return UIImage(named: self)
-    }
-    
-    var url: URL? {
-        return URL(string: self)
-    }
-    
-    func log() {
-        print(self)
-    }
-}
-
-
-func isRTL() -> Bool {
-    return UIApplication.shared.userInterfaceLayoutDirection == .rightToLeft
 }

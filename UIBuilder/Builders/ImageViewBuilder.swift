@@ -19,6 +19,21 @@ public extension UIImageView {
         self.image = image
         return self
     }
+    
+    func highlightedImage(_ highlightedImage: UIImage) -> Self {
+        self.highlightedImage = highlightedImage
+        return self
+    }
+    
+    func isHighlighted(_ isHighlighted) -> Self {
+        self.isHighlighted = isHighlighted
+        return self
+    }
+    
+    func tintColor(_ tintColor: UIColor) -> Self {
+        self.tintColor = tintColor
+        return self
+    }
 }
 
 public extension UIImage {
@@ -26,27 +41,7 @@ public extension UIImage {
     var view: UIImageView {
         return UIImageView(image: self)
     }
-    
-    var button: UIButton {
-        return button(with: .system)
-    }
-    
-    func button(with type: UIButton.ButtonType) -> UIButton {
-        let button = UIButton(type: type)
-        button.frame = CGRect(origin: .zero, size: self.size)
-        button.setImage(self, for: .normal)
-        return button
-    }
-    
-    var barButton: UIBarButtonItem {
-        return UIBarButtonItem(image: self, style: .plain, target: nil, action: nil)
-    }
-    
-    func flip(orientation: Orientation) -> UIImage {
-        return UIImage(cgImage: cgImage!, scale: 1.0, orientation: orientation)
-    }
 }
-
 
 public extension UIColor {
     func image(ofSize size: CGSize = CGSize(width: 1, height: 1)) -> UIImage {
