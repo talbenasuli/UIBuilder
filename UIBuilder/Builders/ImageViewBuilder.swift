@@ -25,7 +25,7 @@ public extension UIImageView {
         return self
     }
     
-    func isHighlighted(_ isHighlighted) -> Self {
+    func isHighlighted(_ isHighlighted: Bool) -> Self {
         self.isHighlighted = isHighlighted
         return self
     }
