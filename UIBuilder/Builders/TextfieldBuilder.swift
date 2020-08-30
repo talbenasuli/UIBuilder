@@ -65,11 +65,6 @@ public extension UITextField {
         return self
     }
     
-    func backgorund(_ backgorund: UIImage) -> Self {
-        self.backgorund = backgorund
-        return self
-    }
-    
     func tintColor(_ tintColor: UIColor) -> Self {
         self.tintColor = tintColor
         return self

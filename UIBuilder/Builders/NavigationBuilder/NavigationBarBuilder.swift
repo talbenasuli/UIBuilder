@@ -41,7 +41,7 @@ public extension UIViewController {
                  contentView.addSubview(content)
                  self.navigationItem.titleView = contentView
              case let .title(title):
-                self.navigationItem.titleView = title.label
+                self.navigationItem.title = title
             }
          }
          

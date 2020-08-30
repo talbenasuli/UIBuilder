@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "UIQuickBuilder"
-  spec.version      = "1.2.1"
+  spec.version      = "1.3.1"
   spec.summary      = "A CocoaPods library written in Swift"
 
   spec.description  = <<-DESC
